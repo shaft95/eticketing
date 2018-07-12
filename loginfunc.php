@@ -56,7 +56,7 @@ HTML;
           Success!
         </div>
 HTML;
-      $script ="setTimeout(function () {window.location.href = 'index.php'}, 2000);";
+      $script ="setTimeout(function () {window.location.href = 'index.html'}, 2000);";
 
       session_start();
       $_SESSION["id"] = $row['passenger_id'];
