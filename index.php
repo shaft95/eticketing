@@ -1,10 +1,6 @@
 <?php
-  session_start();
-  if($_SESSION["id"]==''){
-    header("Location: login.html"); /* Redirect browser */
-    exit();
-  }
-
+  
+include 'include/php/session.php';
   include 'include/layout/nav.html';
 
 ?>
