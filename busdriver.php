@@ -33,9 +33,11 @@
 
 <div class="container">
   <h2 align="center">Bus Driver</h2>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBusDriver">
-    Add
-  </button>
+  <p align="right">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBusDriver">
+      Add
+    </button>
+  </p>
 <table class="table table-hover table-dark">
   <thead>
     <tr>
@@ -117,6 +119,7 @@ HTML;
     },
     function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
+        location.reload();
     });
   });
 
