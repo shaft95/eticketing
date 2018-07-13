@@ -1,10 +1,11 @@
 <?php
 
   include 'include/php/session.php';
+  $_SESSION['title'] = "busDriver";
   include 'include/layout/nav.html';
   include 'include/php/config.php';
   include 'include/php/modal.php';
-  $result = mysqli_query($mysqli, "SELECT * FROM busdriver ORDER BY driver_id DESC");
+  $result = mysqli_query($mysqli, "SELECT * FROM busdriver ORDER BY driver_id");
 ?>
 
 

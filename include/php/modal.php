@@ -31,6 +31,55 @@ HTML;
 HTML;
     break;
   
+  case 'passenger':
+      $title = "Passenger";
+      $id = "Passenger";
+      $input =<<<HTML
+        <div class="form-group">
+          <label for="username" class="col-form-label">Username:</label>
+          <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+          <label for="first_name" class="col-form-label">First Name:</label>
+          <input type="text" class="form-control" id="first_name">
+        </div>
+        <div class="form-group">
+          <label for="last_name" class="col-form-label">Last Name:</label>
+          <input type="text" class="form-control" id="last_name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-form-label">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="mobile_no" class="col-form-label">Mobile No.:</label>
+          <input type="text" class="form-control" id="mobile_no">
+        </div>
+HTML;
+      $editInput =<<<HTML
+        <div class="form-group">
+          <label for="username" class="col-form-label">Username:</label>
+          <input type="text" class="form-control" id="edit_username">
+        </div>
+        <div class="form-group">
+          <label for="first_name" class="col-form-label">First Name:</label>
+          <input type="text" class="form-control" id="edit_first_name">
+        </div>
+        <div class="form-group">
+          <label for="last_name" class="col-form-label">Last Name:</label>
+          <input type="text" class="form-control" id="edit_last_name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-form-label">Email:</label>
+          <input type="text" class="form-control" id="edit_email">
+        </div>
+        <div class="form-group">
+          <label for="mobile_no" class="col-form-label">Mobile No.:</label>
+          <input type="text" class="form-control" id="edit_mobile_no">
+        </div>
+        <input type="hidden" class="form-control" id="passenger_id">
+HTML;
+    break;
   default:
       $title = "Default";
       $input =<<<HTML
