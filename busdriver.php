@@ -1,7 +1,6 @@
 <?php
-  session_start();
-  $_SESSION['title'] = "busDriver";
 
+  include 'include/php/session.php';
   include 'include/layout/nav.html';
   include 'include/php/config.php';
   include 'include/php/modal.php';
@@ -33,7 +32,7 @@
 
 <div class="container">
   <h2 align="center">Bus Driver</h2>
-  <p align="right">
+  <p>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBusDriver">
       Add
     </button>
