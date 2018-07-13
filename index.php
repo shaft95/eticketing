@@ -1,6 +1,9 @@
 <?php
-  // session_start();
-  // $a = $_SESSION["id"];
+  session_start();
+  if($_SESSION["id"]==''){
+    header("Location: login.html"); /* Redirect browser */
+    exit();
+  }
 
   include 'include/layout/nav.html';
 

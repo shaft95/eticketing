@@ -1,4 +1,6 @@
 <?php
+
+  
    $databaseHost = 'localhost';
    $databaseName = 'etma';
    $databaseUsername = 'root';
@@ -14,32 +16,29 @@
    $password = $_POST['password'];
    // var_export($username);die;
    $sql = "SELECT passenger_id, password FROM passenger WHERE username = ?";
-   if($query = $conn->prepare($sql)) { // assuming $mysqli is the connection
-      $driverName = $_POST['driverName'];
-      $icNo = $_POST['icNo'];
-      $query->bind_param('ss', $driverName, $icNo);
+   if($query = $conn->prepare($sql)) { 
+      $query->bind_param('s', $username);
       $query->execute();
 
+      $res = $query->get_result(); 
+      
+      $row = $res->fetch_assoc();
 
-      $row = $query->fetch();
-      var_export($row);die;
       if($row['passenger_id']==null){ 
-          $modal_title = "Error"; 
-   
-          $script ="setTimeout(function () {window.location.href = 'login.html'}, 2000);"; 
+          $result = "invalid_username"; 
       } 
       else if($row['password']!=$password) 
       { 
-        $modal_title = "Error"; 
-          $script ="setTimeout(function () {window.location.href = 'login.html'}, 2000);"; 
+          $result = "invalid_password"; 
       } 
       else{ 
-        $modal_title = "Success"; 
-        session_start(); 
-        $_SESSION["id"] = $row['passenger_id']; 
+          $result = "Success"; 
+          session_start(); 
+          $_SESSION["id"] = $row['passenger_id']; 
    
-       
       } 
+
+      echo $result;
    } else {
        $error = $conn->errno . ' ' . $conn->error;
        echo $error; 
