@@ -114,6 +114,34 @@ HTML;
         </div>
 HTML;
     break;
+
+    case 'bus_stop':
+      $title = "Bus Stop";
+      $id = "BusStop";
+      $input =<<<HTML
+        <div class="form-group">
+          <label for="stop_name" class="col-form-label">Bus Stop Name:</label>
+          <input type="text" class="form-control" id="stop_name">
+        </div>
+        <div class="form-group">
+          <label for="zone_no" class="col-form-label">Zone No.:</label>
+          <input type="text" class="form-control" id="zone_no">
+        </div>
+        <input type="hidden" class="form-control" id="key" value="create">
+HTML;
+      $editInput =<<<HTML
+        <div class="form-group">
+          <label for="stop_name" class="col-form-label">Bus Stop Name:</label>
+          <input type="text" class="form-control" id="edit_stop_name">
+        </div>
+        <div class="form-group">
+          <label for="zone_no" class="col-form-label">Zone No.:</label>
+          <input type="text" class="form-control" id="edit_zone_no">
+        </div>
+        <input type="hidden" class="form-control" id="key" value="update">
+        <input type="hidden" class="form-control" id="stop_id">
+HTML;
+    break;
 }
 
 echo<<<HTML
