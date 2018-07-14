@@ -105,15 +105,6 @@ HTML;
         <input type="hidden" class="form-control" id="fare_id">
 HTML;
     break;
-  default:
-      $title = "Default";
-      $input =<<<HTML
-        <div class="form-group">
-          <label for="Default" class="col-form-label">Default:</label>
-          <input type="text" class="form-control" id="Default">
-        </div>
-HTML;
-    break;
 
     case 'bus_stop':
       $title = "Bus Stop";
@@ -150,6 +141,45 @@ HTML;
         <input type="hidden" class="form-control" id="stop_id">
 HTML;
     break;
+
+    case 'route':
+      $title = "Route";
+      $id = "Route";
+      $input =<<<HTML
+        <div class="form-group">
+          <label for="route_code" class="col-form-label">Route Code:</label>
+          <input type="text" class="form-control" id="route_code">
+        </div>
+        <div class="form-group">
+          <label for="stop_id" class="col-form-label">Bus Stop:</label>
+          <input type="text" class="form-control" id="stop_id">
+        </div>
+        <input type="hidden" class="form-control" id="key" value="create">
+HTML;
+      $editInput =<<<HTML
+        <div class="form-group">
+          <label for="route_code" class="col-form-label">Route Code:</label>
+          <input type="text" class="form-control" id="edit_route_code">
+        </div>
+        <div class="form-group">
+          <label for="stop_id" class="col-form-label">Bus Stop:</label>
+          <input type="text" class="form-control" id="edit_stop_id">
+        </div>
+        <input type="hidden" class="form-control" id="key" value="update">
+        <input type="hidden" class="form-control" id="route_id">
+HTML;
+    break;
+  default:
+      $title = "Default";
+      $input =<<<HTML
+        <div class="form-group">
+          <label for="Default" class="col-form-label">Default:</label>
+          <input type="text" class="form-control" id="Default">
+        </div>
+HTML;
+    break;
+
+    
 }
 
 echo<<<HTML
