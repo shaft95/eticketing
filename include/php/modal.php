@@ -124,6 +124,10 @@ HTML;
           <input type="text" class="form-control" id="stop_name">
         </div>
         <div class="form-group">
+          <label for="stop_code" class="col-form-label">Bus Stop Code:</label>
+          <input type="text" class="form-control" id="stop_code">
+        </div>
+        <div class="form-group">
           <label for="zone_no" class="col-form-label">Zone No.:</label>
           <input type="text" class="form-control" id="zone_no">
         </div>
@@ -133,6 +137,10 @@ HTML;
         <div class="form-group">
           <label for="stop_name" class="col-form-label">Bus Stop Name:</label>
           <input type="text" class="form-control" id="edit_stop_name">
+        </div>
+        <div class="form-group">
+          <label for="stop_code" class="col-form-label">Bus Stop Code:</label>
+          <input type="text" class="form-control" id="edit_stop_code">
         </div>
         <div class="form-group">
           <label for="zone_no" class="col-form-label">Zone No.:</label>

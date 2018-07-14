@@ -41,6 +41,7 @@
   <thead>
     <tr>
       <th scope="col">Bus Stop Name</th>
+      <th scope="col">Bus Stop Code</th>
       <th scope="col">Zone No.</th>
       <th scope="col"></th>
     </tr>
@@ -52,6 +53,7 @@
       // $id = $res['driver_id'];
       echo "<tr id='".$res['stop_id']."'>";
       echo "<td class='stop_name'>".$res['stop_name']."</td>";
+      echo "<td class='stop_code'>".$res['stop_code']."</td>";
       echo "<td class='zone_no'>".$res['zone_no']."</td>";  
       // echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";   
       echo <<<HTML
@@ -82,8 +84,10 @@ HTML;
       id = $(this).closest('tr').attr('id');
       // console.log(id);
       stop_name = $(this).closest('tr').find(".stop_name").text();
+      stop_code = $(this).closest('tr').find(".stop_code").text();
       zone_no = $(this).closest('tr').find(".zone_no").text();
       $("#edit_stop_name").val(stop_name);
+      $("#edit_stop_code").val(stop_code);
       $("#edit_zone_no").val(zone_no);
       $("#stop_id").val(id);
   });
@@ -114,6 +118,7 @@ HTML;
     {
         key: "create",
         stop_name: $( "#stop_name" ).val(),
+        stop_code: $( "#stop_code" ).val(),
         zone_no: $( "#zone_no" ).val()
     },
     function(data, status){
@@ -129,6 +134,7 @@ HTML;
     {
         key: "update",
         stop_name: $( "#edit_stop_name" ).val(),
+        stop_code: $( "#edit_stop_code" ).val(),
         zone_no: $( "#edit_zone_no" ).val(),
         id: $("#stop_id").val()
     },
