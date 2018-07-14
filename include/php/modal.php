@@ -80,6 +80,31 @@ HTML;
         <input type="hidden" class="form-control" id="passenger_id">
 HTML;
     break;
+  case 'fare':
+      $title = "Fare";
+      $id = "Fare";
+      $input =<<<HTML
+        <div class="form-group">
+          <label for="diff_no" class="col-form-label">Different No. Of Zone:</label>
+          <input type="text" class="form-control" id="diff_no">
+        </div>
+        <div class="form-group">
+          <label for="fare_price" class="col-form-label">Fare Price:</label>
+          <input type="text" class="form-control" id="fare_price">
+        </div>
+HTML;
+      $editInput =<<<HTML
+        <div class="form-group">
+          <label for="diff_no" class="col-form-label">Different No. Of Zone:</label>
+          <input type="text" class="form-control" id="edit_diff_no">
+        </div>
+        <div class="form-group">
+          <label for="fare_price" class="col-form-label">Fare Price:</label>
+          <input type="text" class="form-control" id="edit_fare_price">
+        </div>
+        <input type="hidden" class="form-control" id="fare_id">
+HTML;
+    break;
   default:
       $title = "Default";
       $input =<<<HTML

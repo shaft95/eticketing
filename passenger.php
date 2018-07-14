@@ -100,9 +100,9 @@ HTML;
   });
 
   $('.deleteBtn').click(function(){
-      driver_name = $(this).closest('tr').find(".driver_name").text();
+      username = $(this).closest('tr').find(".username").text();
       id = $(this).closest('tr').attr('id');
-      text = "Delete "+driver_name+"?";
+      text = "Delete "+username+"?";
       console.log(id);
       if (confirm(text)){
          $.post("include/php/manage-passenger.php",
